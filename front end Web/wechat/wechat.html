@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微信网页版</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/title.ico">
+    <script type="text/javascript" src="jquery-1.12.4.min (1).js"></script>
+	<link rel="stylesheet" type="text/css" href="final.css">
+</head>
+<body>
+
+<!-- 登录框 -->
+	<div id="login">
+			<img src="images/wechat1.png">
+			<h4>微信网页版</h4>
+		<input type="text" id="name" placeholder="Username"/><br />
+		<input type="password" id="password" placeholder="Password"/><br />
+		<input type="submit" value="登录" id="loginBtn"/>
+		<span id="statusBar"></span>
+	</div>
+
+<!-- 聊天页面 -->
+	<div id="main">
+	    <!-- 侧边烂 -->
+	    <div id="sidebar">
+		    <div id="userinfo">
+		    	<img src="images/wechat2.png" class="profilePhoto">
+		    	<span class="myname"></span>
+		    	<img src="images/choosing.png" class="choose">
+		    	<div class="more">
+		    	    <a href="#">修改信息</a>
+		    	    <hr />
+		    		<a href="#">退出微信</a>
+		    	</div>
+		    </div>		
+		        <div class="column" id="chatBtn">
+		    	<img src="images/chats.png">
+		    	<div id="redDisc"></div>
+		    	</div>
+		    	<div class="column">
+		    	<img src="images/contacts_hover.png">
+		    	</div>
+			<div class="chats">
+			</div>
+			<div class="contacts"></div>
+			</div>
+		<!-- 未选择聊天 -->
+		<div class="right" id="nochoose">
+			<hr />
+			<img src="images/wechat1.png">
+			<p>未选择聊天</p>
+		</div>
+		<!-- 个人信息 -->
+		<div class="right" id="myself">
+			<span>个人信息</span>
+			<hr />
+			<img src="images/profilephoto.png">
+			<div id="myinforma"></div>
+			<button  id="changemyinfos">确定</button>
+			<button  id="cancel">取消</button>
+			<h6></h6>	
+		</div>
+		<!-- 好友详细信息板块 -->
+		<div class="right" id="friendinfo">
+			<span>详细信息</span>
+			<hr />
+			<img src="images/profilephoto.png">			
+			<div id="fInfo"></div>
+			<input type="submit" value="发送消息" id="wantSend"></input>
+		</div>		
+		<!-- 聊天板块 -->
+		<div id="chatting" class="right">
+			<div id="header">
+			    <h5></h5>
+				<span></span>
+			</div>
+			<hr />
+			<div id="chatboard">
+			<div id="readHeight">
+			<div id="clear"></div>
+            </div>
+			</div>
+		
+			<hr />
+			<textarea class="willSend" type="image"></textarea>
+
+			<input type="submit" value="发送" id="send" />
+			<small>按下Ctrl+Enter换行</small>
+		</div>
+	</div>	
+	<script type="text/javascript" src="final.js"></script>
+</body>
+</html>

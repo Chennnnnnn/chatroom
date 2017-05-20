@@ -1,0 +1,416 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	text-decoration: none;
+}
+body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "幼圆";
+	background: url(images/bg.jpg) 50% 50%;
+	background-repeat: no-repeat;
+    background-size: cover; /* 让背景图基于容器大小伸缩 */
+    background-attachment: fixed;  /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+}
+textarea{
+	font-family: "微软雅黑";
+	resize: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none ;
+	/*文本框默认样式*/
+}
+/*滚动条*/
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background-color:transparent;}
+::-webkit-scrollbar-thumb{background-color:rgb(88,88,88);}
+
+h5{
+	display: none;
+}
+#login{
+	border-radius: 5px;
+	border: 1px solid rgba(255,255,255,0.4);
+	box-shadow: 5px 5px 5px gray;
+	display: inline-block;
+	font-size: 18px;
+	margin: 135px 0;
+	padding: 30px 30px;
+	display: inline-block;
+	background-color: rgba(255,255,255,0.2);
+	color: rgb(255,255,255);
+}
+#login h4{
+	margin: 10px auto 10px;
+	font-weight: bold;
+}
+#login span{
+	font-size: 13px;
+	margin-left: 10px;
+}
+#remember{
+	float: left;
+	margin: 20px 0px;
+
+}
+.title{
+	color: white;
+}
+#name,#password{
+	width: 250px;
+	border-radius: 4px;
+	display: inline-block;
+	text-align: center;
+	padding: 12px 15px;
+	background-color: rgba(255,255,255,0.4);
+	border: 1px solid rgba(255,255,255,0.6);
+	margin: 10px 0;
+	color: rgb(169,169,169);
+	font-size: 16px;
+	outline: none;
+
+}
+#loginBtn{
+	display: block;
+	border: none;
+	background-color: rgb(156,215,37);
+	width: 280px;
+	padding: 10px;
+	margin-top: 16px;
+    font-family: "幼圆";
+    color: rgb( 255,255,255);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+ 
+}
+#statusBar{
+	float: right;
+	margin-right: 6px;
+}
+#main{
+	display: none;/*暂时*/
+	width: 840px;
+	height: 645px;
+
+}
+#sidebar{
+	height: 100%;
+	width: 270px;
+	float: left;
+	background-color: rgb(46,50,56);
+}
+.right{
+	height: 100%;
+	width:  570px;
+	background-color: rgb(238,238,238);
+    float: right;
+    display: none;
+}
+#userinfo{
+	width: 210px;
+	height: 30px;
+	margin: 30px 28px;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;		
+}
+.profilePhoto{
+	float: left;
+	margin-right: 20px;
+	
+}
+.myname{
+	color: rgb(255,255,255);
+	font-size: 22px;
+	font-family: "微软雅黑";
+}
+.choose{
+	float: right;
+}
+.more{
+	border-radius: 8px;
+	background-color: rgb(214,214,214);
+	position: absolute;
+	padding: 10px 6px;
+	top: 29px;
+    right: -16px;
+	display: none;
+	text-align: center;
+}
+a{
+	color: black;
+	margin: 8px;
+}
+.more hr{
+	margin: 8px 0;
+	border-width: 0;
+	height: 1px;
+	background-color: rgb(162,162,162);
+}
+.column{
+	display: inline-block;
+	height: 28px;
+	width: 50%;
+	margin-top: 10px;
+	margin-bottom: 18px;
+	float: left;
+}
+#chatBtn{
+	position: relative;
+}
+#redDisc{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(230,46,46);
+	top: 0px;
+    left: 70px;
+    border-radius: 50%;	   
+}
+#chatBtn:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 1px;
+    height: 30px;
+    border-right: 1px solid #24272C;
+}
+.chats,.contacts{
+    width: 100%;
+	height: 490px;
+	border-top: 1px solid black;
+	background-color: rgb(46,50,56);
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	scrollbar-face-color: rgb(88,88,88);
+	scrollbar-track-color: transparent;
+    scrollbar-shadow-color: rgb(88,88,88); 
+    rgb(160,161,163); 
+}
+.chats{
+	display: none;
+}
+.friend,.friendchats{
+	height: 40px;
+	width: 190px;
+	padding: 10px 10px 10px 80px;
+	border-bottom: 1px solid black;
+	background-image:url(images/wechat2.png);
+	background-repeat: no-repeat;
+	background-position: 10% 50%;
+	text-align: left;
+	color: rgb(255,255,255);   
+}
+.friendchats h4{
+	width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.friend input,#myself input{
+	border: none;
+	background-color: transparent;
+	color: rgb(255,255,255);
+}
+.friend input{
+	width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "微软雅黑";
+}
+#myself input{
+	color: rgb(144,144,144);	
+}
+#nochoose hr{
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+#friendinfo span,#myself span{
+	display: inline-block;
+	margin-top: 20px;
+}
+p,small{
+    margin-top: 10px;
+    color: rgb(144,144,144);
+    font-size: 0.6em;
+    font-family: "Microsoft YaHei";
+}
+#myself p{
+    padding-left: 16px;
+}
+#friendinfo img,#myself img{
+    margin: 40px;
+    clear: both;
+}
+#friendinfo{
+	position: relative;
+}
+#wantSend{
+	display: block;
+	margin: 30px auto;
+	border: none;
+	background-color: rgb(66,172,62);
+	width: 180px;
+	height: 40px;
+    font-family: "幼圆";
+    color: rgb( 255, 255, 255 );
+    border-radius: 5px;
+    outline: none;
+    bottom: 120px;
+}
+#myinforma,#fInfo{
+	height: 160px;
+	width: 100%;
+}
+#cancel,#changemyinfos{
+	margin: 30px auto;
+	border: none;
+	background-color: rgb(66,172,62);
+	width: 90px;
+	height: 40px;
+    font-family: "幼圆";
+    color: rgb( 255, 255, 255 );
+    border-radius: 5px;
+    outline: none;
+}
+
+#chatting{
+	display: none;
+	font-family: "微软雅黑";
+}
+#header{
+	height: 60px;
+	line-height: 60px;
+}
+#chatboard{
+	height: 400px;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	scrollbar-face-color: rgb(147,148,151);
+	scrollbar-track-color: transparent;
+    scrollbar-shadow-color: rgb(147,148,151); 
+}
+#clear{
+	clear: both;
+}
+.right hr{
+	width: 500px;
+	border-width: 0;
+	background-color: rgb(214,214,214);
+	display: inline-block;
+	height: 1px;
+	margin: 0;
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+}
+#chatboard .profilePhoto {
+    float: right;
+    margin-right: 14px;	
+    background-color: rgba(12, 13, 13, 0.67);
+}
+.myMessage,.taMessage{
+	max-width: 450px;
+	text-align: left;
+	border-radius: 5px;
+	margin:6px 6px;
+	padding: 8px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+.taMessage{
+	float: left;
+	/*clear: both;*/
+	background-color: rgb(255,255,255);
+}
+.myMessage{
+	float: right;
+	/*clear: both;*/
+	background-color: rgb(178,226,129);
+}
+#send{
+	display: block;
+	background-color: rgb(248，248，248);
+	width: 88px;
+	height: 30px;
+    font-family: "幼圆";
+    border-radius: 5px;
+    border: 1px solid gray;
+    float: right;
+    margin-right: 26px;
+    margin-left: 10px;
+    outline: none;
+}
+small{
+	float: right;
+}
+.willSend{
+	background-color: transparent;
+	border: none;
+	width: 500px;
+	height: 90px;
+	max-height: 90px;
+	margin-top: 12px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-face-color: rgb(147,148,151);
+	scrollbar-track-color: transparent;
+    scrollbar-shadow-color: rgb(147,148,151); 
+
+}
+.time{
+	display: block;
+	clear: both;
+	color: #AB9D9D;
+	padding-top: 8px;
+    padding-bottom: 22px;
+}
+xmp,pre{
+	font-family: "微软雅黑";
+}
+
+#info{
+    width: 100%
+    height: 300px;
+} 
+.friendchats{
+	position: relative;
+}
+.redDisc{
+	position: absolute;
+	width: 15px;
+	height: 13px;
+	background-color: rgb(230,46,46);
+	top: 12px;
+    left: 56px;
+    border-radius: 40%;	
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: 0.7em;
+}
+.hisPhoto{
+	margin-left: 14px;
+	float: left;
+	background-color: rgb(65, 136, 62);
+}
+.friendchats span{
+	font-size: 16px;
+    font-family: "微软雅黑";
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: rgb(112, 109, 109);
+}
+.friendchats:hover span{
+	display: inline-block;
+}
+.friendchats,.friend,.choose,.column,#wantSend,button,#send,.friendchats span{
+	cursor: pointer;
+}
